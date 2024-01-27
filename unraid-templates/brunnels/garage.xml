@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Garage</Name>
+  <Repository>dxflrs/garage</Repository>
+  <Registry>https://hub.docker.com/r/dxflrs/garage</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell></Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/115646-garage</Support>
+  <Project>https://git.deuxfleurs.fr/Deuxfleurs/garage</Project>
+  <Overview>Garage is an S3-compatible distributed object storage service designed for self-hosting at a small-to-medium scale.</Overview>
+  <Category>Network:S3</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/brunnels/unraid-templates/master/brunnels/garage.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/brunnels/unraid-templates/main/brunnels/images/garage.png</Icon>
+  <ExtraParams></ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <Requires/>
+  <Config Name="S3 API Port" Target="3900" Default="3900" Mode="tcp" Description="Garage S3 API" Type="Port" Display="always" Required="true" Mask="false">3900</Config>
+  <Config Name="RPC Port" Target="3901" Default="3901" Mode="tcp" Description="RPC port connecting Garage nodes" Type="Port" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="S3 Web Port" Target="3902" Default="3902" Mode="tcp" Description="PutBucketWebsite API endpoint" Type="Port" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Admin Port" Target="3903" Default="3903" Mode="tcp" Description="Garage administration API" Type="Port" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="K2V Api Port" Target="3904" Default="3904" Mode="tcp" Description="Garage K2V API" Type="Port" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Data Directory" Target="/var/lib/garage/data" Default="/mnt/user/backup/garage/data" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/backup/garage/data</Config>
+  <Config Name="Meta Directory" Target="/var/lib/garage/meta" Default="/mnt/user/backup/garage/meta" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/backup/garage/meta</Config>
+  <Config Name="Config" Target="/etc/garage.toml" Default="/mnt/user/appdata/garage/garage.toml" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/garage/garage.toml</Config>
+</Container>
